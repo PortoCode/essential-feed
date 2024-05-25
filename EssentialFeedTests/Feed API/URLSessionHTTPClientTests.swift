@@ -63,7 +63,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
         
         makeSUT().get(from: anyURL()) { result in
             switch result {
-            case let.failure(receivedError as NSError):
+            case let .failure(receivedError as NSError):
                 XCTAssertEqual(receivedError.domain, error.domain)
                 XCTAssertEqual(receivedError.code, error.code)
             default:
