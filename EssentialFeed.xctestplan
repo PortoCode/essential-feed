@@ -9,6 +9,15 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:EssentialFeed.xcodeproj",
+          "identifier" : "5B107DF72BF5BB2100927709",
+          "name" : "EssentialFeed"
+        }
+      ]
+    },
     "environmentVariableEntries" : [
       {
         "key" : "IDEPreferLogStreaming",
