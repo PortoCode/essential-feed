@@ -1,3 +1,3 @@
 # Essential Feed App
 
-![](https://github.com/PortoCode/essential-feed/workflows/CI-macOS/badge.svg)
+[![CI-macOS](https://github.com/PortoCode/essential-feed/actions/workflows/CI-macOS.yml/badge.svg)](https://github.com/PortoCode/essential-feed/actions/workflows/CI-macOS.yml)
