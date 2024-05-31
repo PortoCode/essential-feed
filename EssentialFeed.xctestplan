@@ -24,7 +24,8 @@
         "value" : "YES"
       }
     ],
-    "testExecutionOrdering" : "random"
+    "testExecutionOrdering" : "random",
+    "threadSanitizerEnabled" : true
   },
   "testTargets" : [
     {
