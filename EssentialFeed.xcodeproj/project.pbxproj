@@ -122,8 +122,8 @@
 		5B107DFA2BF5BB2100927709 /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
-				5B7BDE002BFA81830002E7F8 /* Feed API */,
 				5B107DFB2BF5BB2100927709 /* EssentialFeed.h */,
+				5B7BDE002BFA81830002E7F8 /* Feed API */,
 				5B107E172BF5C12800927709 /* Feed Feature */,
 			);
 			path = EssentialFeed;
