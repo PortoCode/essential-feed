@@ -18,12 +18,12 @@ func uniqueImageFeed() -> (models: [FeedImage], local: [LocalFeedImage]) {
 
 // DSL (Domain Specific Language)
 extension Date {
-    private var feedCacheMaxAgeInDays: Int {
-        return 7
-    }
-    
     func minusFeedCacheMaxAge() -> Date {
         return adding(days: -feedCacheMaxAgeInDays)
+    }
+    
+    private var feedCacheMaxAgeInDays: Int {
+        return 7
     }
     
     private func adding(days: Int) -> Date {
