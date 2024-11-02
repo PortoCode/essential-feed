@@ -33,6 +33,7 @@
 		5B8BB9992C02719F00D40D42 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BB9982C02719F00D40D42 /* XCTestCase+MemoryLeakTracking.swift */; };
 		5B8BD18F2C3798D400CCA870 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BD18E2C3798D400CCA870 /* CacheFeedUseCaseTests.swift */; };
 		5BE36BA62CD5845700ACC57C /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE36BA52CD5845700ACC57C /* FeedCachePolicy.swift */; };
+		5BE36BA82CD6D40200ACC57C /* CodableFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE36BA72CD6D40200ACC57C /* CodableFeedStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		5B8BD15D2C06D36300CCA870 /* CI_macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_macOS.xctestplan; sourceTree = "<group>"; };
 		5B8BD18E2C3798D400CCA870 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		5BE36BA52CD5845700ACC57C /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
+		5BE36BA72CD6D40200ACC57C /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 				5B8BD18E2C3798D400CCA870 /* CacheFeedUseCaseTests.swift */,
 				5B034B3A2CA0B09F00FB65F8 /* LoadFeedFromCacheUseCaseTests.swift */,
 				5B034B402CA371CB00FB65F8 /* ValidateFeedCacheUseCaseTests.swift */,
+				5BE36BA72CD6D40200ACC57C /* CodableFeedStoreTests.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE36BA82CD6D40200ACC57C /* CodableFeedStoreTests.swift in Sources */,
 				5B034B432CA3A0C800FB65F8 /* FeedCacheTestHelpers.swift in Sources */,
 				5B034B412CA371CB00FB65F8 /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				5B7AB8D72BF8BCE60034C68B /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
