@@ -34,6 +34,7 @@
 		5B8BD18F2C3798D400CCA870 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BD18E2C3798D400CCA870 /* CacheFeedUseCaseTests.swift */; };
 		5BE36BA62CD5845700ACC57C /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE36BA52CD5845700ACC57C /* FeedCachePolicy.swift */; };
 		5BE36BA82CD6D40200ACC57C /* CodableFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE36BA72CD6D40200ACC57C /* CodableFeedStoreTests.swift */; };
+		5BF9F2F72CD804A500C8DB96 /* CodableFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9F2F62CD804A500C8DB96 /* CodableFeedStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		5B8BD18E2C3798D400CCA870 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		5BE36BA52CD5845700ACC57C /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		5BE36BA72CD6D40200ACC57C /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
+		5BF9F2F62CD804A500C8DB96 /* CodableFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				5B034B382C9BD2C000FB65F8 /* LocalFeedImage.swift */,
 				5B034B322C9A804100FB65F8 /* LocalFeedLoader.swift */,
 				5BE36BA52CD5845700ACC57C /* FeedCachePolicy.swift */,
+				5BF9F2F62CD804A500C8DB96 /* CodableFeedStore.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				5B034B392C9BD2C000FB65F8 /* LocalFeedImage.swift in Sources */,
 				5B034B352C9A819900FB65F8 /* FeedStore.swift in Sources */,
 				5B034B332C9A804C00FB65F8 /* LocalFeedLoader.swift in Sources */,
+				5BF9F2F72CD804A500C8DB96 /* CodableFeedStore.swift in Sources */,
 				5B0E220B2BFE2FEA009FC3EB /* HTTPClient.swift in Sources */,
 				5B107E132BF5BB4200927709 /* FeedImage.swift in Sources */,
 				5B1C4F9B2C0556ED003F0429 /* URLSessionHTTPClient.swift in Sources */,
