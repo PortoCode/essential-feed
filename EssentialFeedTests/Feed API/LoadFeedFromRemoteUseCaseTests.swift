@@ -169,13 +169,13 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     // the spy's job is to capture the messages (invocations) in a clear and comprehensive way,
     // in order to check how many times the message was invoked, with what parameters and in which order
     private class HTTPClientSpy: HTTPClient {
-        private var messages = [(url: URL, completion: (HTTPClientResult) -> Void)]()
+        private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
         
         var requestedURLs: [URL] {
             return messages.map { $0.url }
         }
         
-        func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void) {
+        func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
             messages.append((url, completion))
         }
         
@@ -190,7 +190,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
                 httpVersion: nil,
                 headerFields: nil
             )!
-            messages[index].completion(.success(data, response))
+            messages[index].completion(.success((data, response)))
         }
     }
     
