@@ -29,7 +29,7 @@
     {
       "target" : {
         "containerPath" : "container:EssentialFeed.xcodeproj",
-        "identifier" : "5BA598F82CFAC1AC007B1795",
+        "identifier" : "5B4BAE7C2CFBA0EE00CE079A",
         "name" : "EssentialFeediOSTests"
       }
     },
