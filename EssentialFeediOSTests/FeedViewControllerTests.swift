@@ -10,6 +10,8 @@ import EssentialFeed
 final class FeedViewController: UITableViewController {
     private var loader: FeedLoader?
     
+    private var onViewIsAppearing: ((FeedViewController) -> Void)?
+    
     convenience init(loader: FeedLoader) {
         self.init()
         self.loader = loader
@@ -20,7 +22,19 @@ final class FeedViewController: UITableViewController {
         
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(load), for: .valueChanged)
-        load()
+        
+        // Note: Using `onViewIsAppearing` to defer `beginRefreshing()` until the view is fully visible.
+        // This ensures the spinner appears correctly, addressing a change in behavior introduced in iOS 17.
+        onViewIsAppearing = { vc in
+            vc.load()
+            vc.onViewIsAppearing = nil
+        }
+    }
+    
+    public override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        
+        onViewIsAppearing?(self)
     }
     
     @objc private func load() {
@@ -35,10 +49,10 @@ final class FeedViewControllerTests: XCTestCase {
     
     func test_loadFeedActions_requestFeedFromLoader() {
         let (sut, loader) = makeSUT()
-        XCTAssertEqual(loader.loadCallCount, 0, "Expected no loading requests before view is loaded")
+        XCTAssertEqual(loader.loadCallCount, 0, "Expected no loading requests before view appears")
         
-        sut.loadViewIfNeeded()
-        XCTAssertEqual(loader.loadCallCount, 1, "Expected a loading request once view is loaded")
+        sut.simulateAppearance()
+        XCTAssertEqual(loader.loadCallCount, 1, "Expected a loading request once view appears")
         
         sut.simulateUserInitiatedFeedReload()
         XCTAssertEqual(loader.loadCallCount, 2, "Expected another loading request once user initiates a reload")
@@ -50,8 +64,8 @@ final class FeedViewControllerTests: XCTestCase {
     func test_loadingFeedIndicator_isVisibleWhileLoadingFeed() {
         let (sut, loader) = makeSUT()
         
-        sut.loadViewIfNeeded()
-        XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once view is loaded")
+        sut.simulateAppearance()
+        XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once view appears")
         
         loader.completeFeedLoading(at: 0)
         XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once loading is completed")
@@ -92,12 +106,52 @@ final class FeedViewControllerTests: XCTestCase {
 }
 
 private extension FeedViewController {
+    func simulateAppearance() {
+        if !isViewLoaded {
+            loadViewIfNeeded()
+            prepareForFirstAppearance()
+        }
+        
+        beginAppearanceTransition(true, animated: false)
+        endAppearanceTransition()
+    }
+    
+    private func prepareForFirstAppearance() {
+        replaceRefreshControlWithFakeForiOS17PlusSupport()
+    }
+    
+    private func replaceRefreshControlWithFakeForiOS17PlusSupport() {
+        let spyRefreshControl = UIRefreshControlSpy()
+        
+        refreshControl?.allTargets.forEach { target in
+            refreshControl?.actions(forTarget: target, forControlEvent: .valueChanged)?.forEach { action in
+                spyRefreshControl.addTarget(target, action: Selector(action), for: .valueChanged)
+            }
+        }
+        
+        refreshControl = spyRefreshControl
+    }
+    
     func simulateUserInitiatedFeedReload() {
         refreshControl?.simulatePullToRefresh()
     }
     
     var isShowingLoadingIndicator: Bool {
         return refreshControl?.isRefreshing == true
+    }
+}
+
+private class UIRefreshControlSpy: UIRefreshControl {
+    private var _isRefreshing = false
+    
+    override var isRefreshing: Bool { _isRefreshing }
+    
+    override func beginRefreshing() {
+        _isRefreshing = true
+    }
+    
+    override func endRefreshing() {
+        _isRefreshing = false
     }
 }
 
