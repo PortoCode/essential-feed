@@ -6,20 +6,6 @@
 import UIKit
 import EssentialFeediOS
 
-private class UIRefreshControlSpy: UIRefreshControl {
-    private var _isRefreshing = false
-    
-    override var isRefreshing: Bool { _isRefreshing }
-    
-    override func beginRefreshing() {
-        _isRefreshing = true
-    }
-    
-    override func endRefreshing() {
-        _isRefreshing = false
-    }
-}
-
 extension FeedViewController {
     func simulateAppearance() {
         if !isViewLoaded {
