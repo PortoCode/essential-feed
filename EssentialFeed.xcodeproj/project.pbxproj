@@ -276,15 +276,6 @@
 			path = Composers;
 			sourceTree = "<group>";
 		};
-		5B0682722D0BD877009749F3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				5B0682732D0BD8AD009749F3 /* FeedViewModel.swift */,
-				5B0682752D0D0B02009749F3 /* FeedImageViewModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		5B0E220E2BFE404F009FC3EB /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +368,7 @@
 			children = (
 				5B4BAE8F2CFBA12A00CE079A /* EssentialFeediOS.h */,
 				5B6992F92D09350600DD47E9 /* Feed Image Loader */,
+				5B6DBD292D4DB8D400E76FA0 /* Feed Presentation */,
 				5B6992F72D0932FA00DD47E9 /* Feed UI */,
 			);
 			path = EssentialFeediOS;
@@ -437,7 +429,6 @@
 			isa = PBXGroup;
 			children = (
 				5B06826F2D0A8E03009749F3 /* Composers */,
-				5B0682722D0BD877009749F3 /* Models */,
 				5B6992EB2D091F0A00DD47E9 /* Controllers */,
 				5B6992EC2D091F2100DD47E9 /* Views */,
 			);
@@ -458,6 +449,15 @@
 				5B6992FA2D09353200DD47E9 /* FeedImageDataLoader.swift */,
 			);
 			path = "Feed Image Loader";
+			sourceTree = "<group>";
+		};
+		5B6DBD292D4DB8D400E76FA0 /* Feed Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5B0682732D0BD8AD009749F3 /* FeedViewModel.swift */,
+				5B0682752D0D0B02009749F3 /* FeedImageViewModel.swift */,
+			);
+			path = "Feed Presentation";
 			sourceTree = "<group>";
 		};
 		5B7BDE002BFA81830002E7F8 /* Feed API */ = {
@@ -681,7 +681,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
-				LastUpgradeCheck = 1610;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					5B107DF72BF5BB2100927709 = {
 						CreatedOnToolsVersion = 15.4;
@@ -1185,6 +1185,7 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1222,6 +1223,7 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
