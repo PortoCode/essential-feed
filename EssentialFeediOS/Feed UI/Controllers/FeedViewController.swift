@@ -6,7 +6,7 @@
 import UIKit
 
 public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching {
-    public var refreshController: FeedRefreshViewController?
+    @IBOutlet public var refreshController: FeedRefreshViewController?
     
     var tableModel = [FeedImageCellController]() {
         didSet { tableView.reloadData() }
@@ -18,13 +18,12 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
         super.viewDidLoad()
         
         tableView.prefetchDataSource = self
-        refreshControl = refreshController?.view
         
         // Note: Using `onViewIsAppearing` to defer `beginRefreshing()` until the view is fully visible.
         // This ensures the spinner appears correctly, addressing a change in behavior introduced in iOS 17.
         onViewIsAppearing = { vc in
-            vc.refreshController?.refresh()
             vc.onViewIsAppearing = nil
+            vc.refreshController?.refresh()
         }
     }
     
