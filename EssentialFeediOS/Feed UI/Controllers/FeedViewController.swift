@@ -21,8 +21,6 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.prefetchDataSource = self
-        
         // Note: Using `onViewIsAppearing` to defer `beginRefreshing()` until the view is fully visible.
         // This ensures the spinner appears correctly, addressing a change in behavior introduced in iOS 17.
         onViewIsAppearing = { vc in

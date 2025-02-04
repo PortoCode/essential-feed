@@ -126,6 +126,7 @@
                         <connections>
                             <outlet property="dataSource" destination="Ssn-IQ-6Gh" id="XgS-QZ-mvN"/>
                             <outlet property="delegate" destination="Ssn-IQ-6Gh" id="vJu-Up-9j7"/>
+                            <outlet property="prefetchDataSource" destination="Ssn-IQ-6Gh" id="nhm-M3-w9K"/>
                         </connections>
                     </tableView>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="atA-rK-Zru">
