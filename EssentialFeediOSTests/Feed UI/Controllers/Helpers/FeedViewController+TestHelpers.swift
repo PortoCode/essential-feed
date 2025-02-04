@@ -31,7 +31,6 @@ extension FeedViewController {
         }
         
         refreshControl = spyRefreshControl
-        refreshController?.view = spyRefreshControl
     }
     
     func simulateUserInitiatedFeedReload() {
