@@ -5,30 +5,39 @@
 
 import UIKit
 
-public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching {
-    public var refreshController: FeedRefreshViewController?
+protocol FeedViewControllerDelegate {
+    func didRequestFeedRefresh()
+}
+
+public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, FeedLoadingView {
+    var delegate: FeedViewControllerDelegate?
+    
     var tableModel = [FeedImageCellController]() {
         didSet { tableView.reloadData() }
     }
     
     private var onViewIsAppearing: ((FeedViewController) -> Void)?
     
-    convenience init(refreshController: FeedRefreshViewController) {
-        self.init()
-        self.refreshController = refreshController
-    }
-    
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.prefetchDataSource = self
-        refreshControl = refreshController?.view
         
         // Note: Using `onViewIsAppearing` to defer `beginRefreshing()` until the view is fully visible.
         // This ensures the spinner appears correctly, addressing a change in behavior introduced in iOS 17.
         onViewIsAppearing = { vc in
-            vc.refreshController?.refresh()
             vc.onViewIsAppearing = nil
+            vc.refresh()
+        }
+    }
+    
+    @IBAction private func refresh() {
+        delegate?.didRequestFeedRefresh()
+    }
+    
+    func display(_ viewModel: FeedLoadingViewModel) {
+        if viewModel.isLoading {
+            refreshControl?.beginRefreshing()
+        } else {
+            refreshControl?.endRefreshing()
         }
     }
     
@@ -43,7 +52,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellController(forRowAt: indexPath).view()
+        return cellController(forRowAt: indexPath).view(in: tableView)
     }
     
     public override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
