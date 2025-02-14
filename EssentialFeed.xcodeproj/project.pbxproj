@@ -730,6 +730,7 @@
 				en,
 				Base,
 				"pt-BR",
+				es,
 			);
 			mainGroup = 5B107DEE2BF5BB2100927709;
 			productRefGroup = 5B107DF92BF5BB2100927709 /* Products */;
