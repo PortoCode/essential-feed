@@ -15,19 +15,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="4rO-dP-KUh">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="16"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="4rO-dP-KUh" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwD-rG-GeP">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                                    <state key="normal" title="Error label">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="hideMessageAnimated" destination="4rO-dP-KUh" eventType="touchUpInside" id="ybl-Q6-E02"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="qwD-rG-GeP" secondAttribute="bottom" id="3OA-gF-hkM"/>
+                                <constraint firstAttribute="trailing" secondItem="qwD-rG-GeP" secondAttribute="trailing" id="660-j7-ATf"/>
+                                <constraint firstItem="qwD-rG-GeP" firstAttribute="leading" secondItem="4rO-dP-KUh" secondAttribute="leading" id="QI2-rZ-Dks"/>
+                                <constraint firstItem="qwD-rG-GeP" firstAttribute="top" secondItem="4rO-dP-KUh" secondAttribute="top" id="feW-NN-huC"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="button" destination="qwD-rG-GeP" id="XL7-MW-mMc"/>
+                            </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="H2r-ef-Zu2">
-                            <rect key="frame" x="0.0" y="669" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="687" width="393" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="575" id="XQ2-Ny-T4G" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="66" width="393" height="575"/>
+                                <rect key="frame" x="0.0" y="84" width="393" height="575"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XQ2-Ny-T4G" id="4Es-Zp-Ac7">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="575"/>
@@ -147,6 +169,9 @@
                             <action selector="refresh" destination="Ssn-IQ-6Gh" eventType="valueChanged" id="MFY-bV-hdx"/>
                         </connections>
                     </refreshControl>
+                    <connections>
+                        <outlet property="errorView" destination="4rO-dP-KUh" id="dri-h8-QC4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc5-rs-MSZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
