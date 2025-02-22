@@ -3,6 +3,6 @@
 // Copyright © 2025 PortoCode. All Rights Reserved.
 //
 
-struct FeedLoadingViewModel {
-    let isLoading: Bool
+public struct FeedLoadingViewModel {
+    public let isLoading: Bool
 }

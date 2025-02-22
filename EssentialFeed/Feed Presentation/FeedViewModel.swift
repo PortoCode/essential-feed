@@ -3,8 +3,6 @@
 // Copyright © 2025 PortoCode. All Rights Reserved.
 //
 
-import EssentialFeed
-
-struct FeedViewModel {
-    let feed: [FeedImage]
+public struct FeedViewModel {
+    public let feed: [FeedImage]
 }
