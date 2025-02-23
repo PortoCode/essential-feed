@@ -386,6 +386,7 @@
 			children = (
 				5B107E122BF5BB4200927709 /* FeedImage.swift */,
 				5B107E142BF5BF1400927709 /* FeedLoader.swift */,
+				5B6992FA2D09353200DD47E9 /* FeedImageDataLoader.swift */,
 			);
 			path = "Feed Feature";
 			sourceTree = "<group>";
@@ -412,7 +413,6 @@
 			isa = PBXGroup;
 			children = (
 				5B4BAE8F2CFBA12A00CE079A /* EssentialFeediOS.h */,
-				5B6992F92D09350600DD47E9 /* Feed Image Loader */,
 				5B6992F72D0932FA00DD47E9 /* Feed UI */,
 			);
 			path = EssentialFeediOS;
@@ -480,14 +480,6 @@
 				5B69928E2CFE811200DD47E9 /* FeedUIIntegrationTests.swift */,
 			);
 			path = "Feed UI";
-			sourceTree = "<group>";
-		};
-		5B6992F92D09350600DD47E9 /* Feed Image Loader */ = {
-			isa = PBXGroup;
-			children = (
-				5B6992FA2D09353200DD47E9 /* FeedImageDataLoader.swift */,
-			);
-			path = "Feed Image Loader";
 			sourceTree = "<group>";
 		};
 		5B74FD1B2D64A6DE007478DC /* Helpers */ = {
