@@ -310,6 +310,7 @@
 				5B034B322C9A804100FB65F8 /* LocalFeedLoader.swift */,
 				5BE36BA52CD5845700ACC57C /* FeedCachePolicy.swift */,
 				5B8829212D6BEB4E006E0BD7 /* LocalFeedImageDataLoader.swift */,
+				5B8829232D6BEB71006E0BD7 /* FeedImageDataStore.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -603,7 +604,6 @@
 			isa = PBXGroup;
 			children = (
 				5BC4F6C92CDAEFD30002D4CF /* CoreData */,
-				5B8829232D6BEB71006E0BD7 /* FeedImageDataStore.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
