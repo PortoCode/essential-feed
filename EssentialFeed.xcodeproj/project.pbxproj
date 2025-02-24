@@ -246,6 +246,7 @@
 		5BC4F6CA2CDAF0B20002D4CF /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		5BC4F6CC2CDAF1B30002D4CF /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
 		5BC4F6CE2CDAF1C60002D4CF /* ManagedFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
+		5BDE3C632D6C1672005D520D /* FeedStore2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore2.xcdatamodel; sourceTree = "<group>"; };
 		5BE36BA52CD5845700ACC57C /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		5BF9F2F82CD9961400C8DB96 /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		5BF9F2FA2CD997F300C8DB96 /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
@@ -622,10 +623,10 @@
 			isa = PBXGroup;
 			children = (
 				5BF9F3092CDAD24D00C8DB96 /* CoreDataFeedStore.swift */,
-				5BF9F30B2CDAD64700C8DB96 /* FeedStore.xcdatamodeld */,
 				5BC4F6CA2CDAF0B20002D4CF /* CoreDataHelpers.swift */,
 				5BC4F6CC2CDAF1B30002D4CF /* ManagedCache.swift */,
 				5BC4F6CE2CDAF1C60002D4CF /* ManagedFeedImage.swift */,
+				5BF9F30B2CDAD64700C8DB96 /* FeedStore.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1544,9 +1545,10 @@
 		5BF9F30B2CDAD64700C8DB96 /* FeedStore.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				5BDE3C632D6C1672005D520D /* FeedStore2.xcdatamodel */,
 				5BF9F30C2CDAD64700C8DB96 /* FeedStore.xcdatamodel */,
 			);
-			currentVersion = 5BF9F30C2CDAD64700C8DB96 /* FeedStore.xcdatamodel */;
+			currentVersion = 5BDE3C632D6C1672005D520D /* FeedStore2.xcdatamodel */;
 			path = FeedStore.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
