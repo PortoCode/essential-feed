@@ -43,6 +43,7 @@
 		5BDE3C872D6D12BA005D520D /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDE3CDF2D6D186D005D520D /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDE3CE02D6D186D005D520D /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BDE3D0C2D6D6092005D520D /* EssentialApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = EssentialApp.xctestplan; path = EssentialAppTests/EssentialApp.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -94,6 +95,7 @@
 		5BDE3C682D6D12B8005D520D = {
 			isa = PBXGroup;
 			children = (
+				5BDE3D0C2D6D6092005D520D /* EssentialApp.xctestplan */,
 				5BDE3C732D6D12B8005D520D /* EssentialApp */,
 				5BDE3C8A2D6D12BA005D520D /* EssentialAppTests */,
 				5BDE3CDE2D6D186D005D520D /* Frameworks */,
