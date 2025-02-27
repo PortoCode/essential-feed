@@ -49,17 +49,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5BBDA01D2D6FF9A700D68DF0 /* Exceptions for "EssentialApp" folder in "EssentialAppTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				FeedImageDataLoaderCacheDecorator.swift,
-			);
-			target = 5BDE3C862D6D12BA005D520D /* EssentialAppTests */;
-		};
 		5BDE3C992D6D12BA005D520D /* Exceptions for "EssentialApp" folder in "EssentialApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				FeedImageDataLoaderCacheDecorator.swift,
 				Info.plist,
 			);
 			target = 5BDE3C702D6D12B8005D520D /* EssentialApp */;
@@ -71,7 +63,6 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				5BDE3C992D6D12BA005D520D /* Exceptions for "EssentialApp" folder in "EssentialApp" target */,
-				5BBDA01D2D6FF9A700D68DF0 /* Exceptions for "EssentialApp" folder in "EssentialAppTests" target */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
