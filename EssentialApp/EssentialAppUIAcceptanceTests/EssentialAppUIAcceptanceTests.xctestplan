@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "1C72DE09-1522-41C2-A2CD-1727C894E236",
+      "id" : "BEB595B4-9364-4FB0-9A36-B6EAFD0D066A",
       "name" : "Test Scheme Action",
       "options" : {
 
@@ -22,11 +22,10 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : false,
       "target" : {
         "containerPath" : "container:EssentialApp.xcodeproj",
-        "identifier" : "5BDE3C862D6D12BA005D520D",
-        "name" : "EssentialAppTests"
+        "identifier" : "5BBDA0822D72983C00D68DF0",
+        "name" : "EssentialAppUIAcceptanceTests"
       }
     }
   ],
