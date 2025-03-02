@@ -2,7 +2,7 @@
   "configurations" : [
     {
       "id" : "91820604-8FC3-4344-8FDE-8E997DE399E6",
-      "name" : "Configuration 1",
+      "name" : "Test Scheme Action",
       "options" : {
 
       }
@@ -32,27 +32,7 @@
   },
   "testTargets" : [
     {
-      "target" : {
-        "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
-        "identifier" : "5B4BAE7C2CFBA0EE00CE079A",
-        "name" : "EssentialFeediOSTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
-        "identifier" : "5BA598AF2CE18F9F007B1795",
-        "name" : "EssentialFeedCacheIntegrationTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
-        "identifier" : "5B1C4FC52C057236003F0429",
-        "name" : "EssentialFeedAPIEndToEndTests"
-      }
-    },
-    {
+      "parallelizable" : false,
       "target" : {
         "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
         "identifier" : "5B107E012BF5BB2100927709",
@@ -60,10 +40,42 @@
       }
     },
     {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
+        "identifier" : "5B1C4FC52C057236003F0429",
+        "name" : "EssentialFeedAPIEndToEndTests"
+      }
+    },
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
+        "identifier" : "5BA598AF2CE18F9F007B1795",
+        "name" : "EssentialFeedCacheIntegrationTests"
+      }
+    },
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
+        "identifier" : "5B4BAE7C2CFBA0EE00CE079A",
+        "name" : "EssentialFeediOSTests"
+      }
+    },
+    {
+      "parallelizable" : false,
       "target" : {
         "containerPath" : "container:EssentialApp.xcodeproj",
         "identifier" : "5BDE3C862D6D12BA005D520D",
         "name" : "EssentialAppTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:EssentialApp.xcodeproj",
+        "identifier" : "5BBDA0822D72983C00D68DF0",
+        "name" : "EssentialAppUIAcceptanceTests"
       }
     }
   ],
