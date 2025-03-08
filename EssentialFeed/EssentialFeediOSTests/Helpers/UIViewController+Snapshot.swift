@@ -5,7 +5,6 @@
 
 import UIKit
 
-
 extension UIViewController {
     func snapshot(for configuration: SnapshotConfiguration) -> UIImage {
         return SnapshotWindow(configuration: configuration, root: self).snapshot()
@@ -18,19 +17,19 @@ struct SnapshotConfiguration {
     let layoutMargins: UIEdgeInsets
     let traitCollection: UITraitCollection
     
-    static func iPhone15(style: UIUserInterfaceStyle) -> SnapshotConfiguration {
+    static func iPhone8(style: UIUserInterfaceStyle) -> SnapshotConfiguration {
         return SnapshotConfiguration(
-            size: CGSize(width: 393, height: 852),
-            safeAreaInsets: UIEdgeInsets(top: 59, left: 0, bottom: 34, right: 0),
-            layoutMargins: UIEdgeInsets(top: 59, left: 16, bottom: 34, right: 16),
+            size: CGSize(width: 375, height: 667),
+            safeAreaInsets: UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0),
+            layoutMargins: UIEdgeInsets(top: 20, left: 16, bottom: 0, right: 16),
             traitCollection: UITraitCollection {
-                $0.forceTouchCapability = .unavailable
+                $0.forceTouchCapability = .available
                 $0.layoutDirection = .leftToRight
                 $0.preferredContentSizeCategory = .medium
                 $0.userInterfaceIdiom = .phone
                 $0.horizontalSizeClass = .compact
                 $0.verticalSizeClass = .regular
-                $0.displayScale = 3
+                $0.displayScale = 2
                 $0.displayGamut = .P3
                 $0.userInterfaceStyle = style
             }
@@ -39,7 +38,7 @@ struct SnapshotConfiguration {
 }
 
 private final class SnapshotWindow: UIWindow {
-    private var configuration: SnapshotConfiguration = .iPhone15(style: .light)
+    private var configuration: SnapshotConfiguration = .iPhone8(style: .light)
     
     convenience init(configuration: SnapshotConfiguration, root: UIViewController) {
         self.init(frame: CGRect(origin: .zero, size: configuration.size))
