@@ -14,7 +14,8 @@ class FeedSnapshotTests: XCTestCase {
         
         sut.display(emptyFeed())
         
-        assert(snapshot: sut.snapshot(), named: "EMPTY_FEED")
+        assert(snapshot: sut.snapshot(for: .iPhone15(style: .light)), named: "EMPTY_FEED_light")
+        assert(snapshot: sut.snapshot(for: .iPhone15(style: .dark)), named: "EMPTY_FEED_dark")
     }
     
     func test_feedWithContent() {
@@ -22,7 +23,8 @@ class FeedSnapshotTests: XCTestCase {
         
         sut.display(feedWithContent())
         
-        assert(snapshot: sut.snapshot(), named: "FEED_WITH_CONTENT")
+        assert(snapshot: sut.snapshot(for: .iPhone15(style: .light)), named: "FEED_WITH_CONTENT_light")
+        assert(snapshot: sut.snapshot(for: .iPhone15(style: .dark)), named: "FEED_WITH_CONTENT_dark")
     }
     
     func test_feedWithErrorMessage() {
@@ -30,7 +32,8 @@ class FeedSnapshotTests: XCTestCase {
         
         sut.display(.error(message: "This is a\nmulti-line\nerror message"))
         
-        assert(snapshot: sut.snapshot(), named: "FEED_WITH_ERROR_MESSAGE")
+        assert(snapshot: sut.snapshot(for: .iPhone15(style: .light)), named: "FEED_WITH_ERROR_MESSAGE_light")
+        assert(snapshot: sut.snapshot(for: .iPhone15(style: .dark)), named: "FEED_WITH_ERROR_MESSAGE_dark")
     }
     
     func test_feedWithFailedImageLoading() {
@@ -38,7 +41,8 @@ class FeedSnapshotTests: XCTestCase {
         
         sut.display(feedWithFailedImageLoading())
         
-        assert(snapshot: sut.snapshot(), named: "FEED_WITH_FAILED_IMAGE_LOADING")
+        assert(snapshot: sut.snapshot(for: .iPhone15(style: .light)), named: "FEED_WITH_FAILED_IMAGE_LOADING_light")
+        assert(snapshot: sut.snapshot(for: .iPhone15(style: .dark)), named: "FEED_WITH_FAILED_IMAGE_LOADING_dark")
     }
     
     // MARK: - Helpers
@@ -48,6 +52,8 @@ class FeedSnapshotTests: XCTestCase {
         let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
         let controller = storyboard.instantiateInitialViewController() as! FeedViewController
         controller.loadViewIfNeeded()
+        controller.tableView.showsVerticalScrollIndicator = false
+        controller.tableView.showsHorizontalScrollIndicator = false
         return controller
     }
     
@@ -139,10 +145,71 @@ class FeedSnapshotTests: XCTestCase {
 }
 
 extension UIViewController {
+    func snapshot(for configuration: SnapshotConfiguration) -> UIImage {
+        return SnapshotWindow(configuration: configuration, root: self).snapshot()
+    }
+}
+
+struct SnapshotConfiguration {
+    let size: CGSize
+    let safeAreaInsets: UIEdgeInsets
+    let layoutMargins: UIEdgeInsets
+    let traitCollection: UITraitCollection
+    
+    static func iPhone15(style: UIUserInterfaceStyle) -> SnapshotConfiguration {
+        return SnapshotConfiguration(
+            size: CGSize(width: 393, height: 852),
+            safeAreaInsets: UIEdgeInsets(top: 59, left: 0, bottom: 34, right: 0),
+            layoutMargins: UIEdgeInsets(top: 59, left: 16, bottom: 34, right: 16),
+            traitCollection: UITraitCollection {
+                $0.forceTouchCapability = .unavailable
+                $0.layoutDirection = .leftToRight
+                $0.preferredContentSizeCategory = .medium
+                $0.userInterfaceIdiom = .phone
+                $0.horizontalSizeClass = .compact
+                $0.verticalSizeClass = .regular
+                $0.displayScale = 3
+                $0.displayGamut = .P3
+                $0.userInterfaceStyle = style
+            }
+        )
+    }
+}
+
+private final class SnapshotWindow: UIWindow {
+    private var configuration: SnapshotConfiguration = .iPhone15(style: .light)
+    
+    convenience init(configuration: SnapshotConfiguration, root: UIViewController) {
+        self.init(frame: CGRect(origin: .zero, size: configuration.size))
+        self.configuration = configuration
+        self.layoutMargins = configuration.layoutMargins
+        self.rootViewController = root
+        self.isHidden = false
+        root.view.layoutMargins = configuration.layoutMargins
+    }
+    
+    override var safeAreaInsets: UIEdgeInsets {
+        return configuration.safeAreaInsets
+    }
+    
+    override var traitCollection: UITraitCollection {
+        return super.traitCollection.modifyingTraits { traits in
+            traits.forceTouchCapability = configuration.traitCollection.forceTouchCapability
+            traits.layoutDirection = configuration.traitCollection.layoutDirection
+            traits.preferredContentSizeCategory = configuration.traitCollection.preferredContentSizeCategory
+            traits.userInterfaceIdiom = configuration.traitCollection.userInterfaceIdiom
+            traits.horizontalSizeClass = configuration.traitCollection.horizontalSizeClass
+            traits.verticalSizeClass = configuration.traitCollection.verticalSizeClass
+            traits.displayScale = configuration.traitCollection.displayScale
+            traits.displayGamut = configuration.traitCollection.displayGamut
+            traits.userInterfaceStyle = configuration.traitCollection.userInterfaceStyle
+        }
+    }
+    
     func snapshot() -> UIImage {
-        let renderer = UIGraphicsImageRenderer(bounds: view.bounds)
+        let renderer = UIGraphicsImageRenderer(bounds: bounds, format: .init(for: traitCollection))
         return renderer.image { action in
-            view.layer.render(in: action.cgContext)
+            layer.render(in: action.cgContext)
         }
     }
 }
