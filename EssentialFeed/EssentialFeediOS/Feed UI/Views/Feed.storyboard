@@ -81,7 +81,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location, Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QqM-me-7wW">
                                                             <rect key="frame" x="16" y="0.0" width="337" height="36"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -100,14 +100,14 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="↻">
-                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                             </state>
                                                             <connections>
                                                                 <action selector="retryButtonTapped" destination="XQ2-Ny-T4G" eventType="touchUpInside" id="NVx-er-znm"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="3Ky-4e-8ye" firstAttribute="leading" secondItem="vyk-vI-UbG" secondAttribute="leading" id="7AL-22-Qm9"/>
                                                         <constraint firstAttribute="trailing" secondItem="3Ky-4e-8ye" secondAttribute="trailing" id="MBr-Eg-ifg"/>
@@ -132,7 +132,7 @@
                                                     </constraints>
                                                     <string key="text">Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -189,6 +189,12 @@
     </scenes>
     <resources>
         <image name="pin" width="10" height="14.333333015441895"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
