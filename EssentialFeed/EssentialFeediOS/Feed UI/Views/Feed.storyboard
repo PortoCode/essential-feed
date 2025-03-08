@@ -19,27 +19,22 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwD-rG-GeP">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5A2-jn-0GF">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
-                                    <state key="normal" title="Error label">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="hideMessageAnimated" destination="4rO-dP-KUh" eventType="touchUpInside" id="ybl-Q6-E02"/>
-                                    </connections>
-                                </button>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="1" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="qwD-rG-GeP" secondAttribute="bottom" id="3OA-gF-hkM"/>
-                                <constraint firstAttribute="trailing" secondItem="qwD-rG-GeP" secondAttribute="trailing" id="660-j7-ATf"/>
-                                <constraint firstItem="qwD-rG-GeP" firstAttribute="leading" secondItem="4rO-dP-KUh" secondAttribute="leading" id="QI2-rZ-Dks"/>
-                                <constraint firstItem="qwD-rG-GeP" firstAttribute="top" secondItem="4rO-dP-KUh" secondAttribute="top" id="feW-NN-huC"/>
+                                <constraint firstItem="5A2-jn-0GF" firstAttribute="top" secondItem="4rO-dP-KUh" secondAttribute="top" id="LuN-ci-cAl"/>
+                                <constraint firstItem="5A2-jn-0GF" firstAttribute="leading" secondItem="4rO-dP-KUh" secondAttribute="leading" id="SKs-H9-mIi"/>
+                                <constraint firstAttribute="bottom" secondItem="5A2-jn-0GF" secondAttribute="bottom" id="aPC-fa-cWF"/>
+                                <constraint firstAttribute="trailing" secondItem="5A2-jn-0GF" secondAttribute="trailing" id="fXX-CP-YAQ"/>
                             </constraints>
                             <connections>
-                                <outlet property="button" destination="qwD-rG-GeP" id="XL7-MW-mMc"/>
+                                <outlet property="label" destination="5A2-jn-0GF" id="dhZ-Pz-Ms5"/>
                             </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="H2r-ef-Zu2">
