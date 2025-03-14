@@ -43,6 +43,10 @@
 		5B73492E2D843BBE007F7D5D /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73492D2D843BBE007F7D5D /* LoadResourcePresenter.swift */; };
 		5B7349332D844B03007F7D5D /* Shared.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5B7349322D844B03007F7D5D /* Shared.xcstrings */; };
 		5B7349352D844D6D007F7D5D /* SharedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7349342D844D6D007F7D5D /* SharedLocalizationTests.swift */; };
+		5B7349372D84E167007F7D5D /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7349362D84E167007F7D5D /* SharedLocalizationTestHelpers.swift */; };
+		5B7349382D84E167007F7D5D /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7349362D84E167007F7D5D /* SharedLocalizationTestHelpers.swift */; };
+		5B7349392D84E167007F7D5D /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7349362D84E167007F7D5D /* SharedLocalizationTestHelpers.swift */; };
+		5B73493A2D84E167007F7D5D /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7349362D84E167007F7D5D /* SharedLocalizationTestHelpers.swift */; };
 		5B74FD1A2D649D0E007478DC /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74FD192D649D0D007478DC /* ErrorView.swift */; };
 		5B74FD1F2D64A821007478DC /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74FD1E2D64A821007478DC /* UIRefreshControl+Helpers.swift */; };
 		5B74FD222D6A5F39007478DC /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74FD212D6A5F39007478DC /* FeedPresenterTests.swift */; };
@@ -190,6 +194,7 @@
 		5B73492D2D843BBE007F7D5D /* LoadResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenter.swift; sourceTree = "<group>"; };
 		5B7349322D844B03007F7D5D /* Shared.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Shared.xcstrings; sourceTree = "<group>"; };
 		5B7349342D844D6D007F7D5D /* SharedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTests.swift; sourceTree = "<group>"; };
+		5B7349362D84E167007F7D5D /* SharedLocalizationTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTestHelpers.swift; sourceTree = "<group>"; };
 		5B74FD192D649D0D007478DC /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		5B74FD1E2D64A821007478DC /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 		5B74FD212D6A5F39007478DC /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
@@ -601,6 +606,7 @@
 			children = (
 				5B8BB9982C02719F00D40D42 /* XCTestCase+MemoryLeakTracking.swift */,
 				5B034B442CA3A1A100FB65F8 /* SharedTestHelpers.swift */,
+				5B7349362D84E167007F7D5D /* SharedLocalizationTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -963,6 +969,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B034B432CA3A0C800FB65F8 /* FeedCacheTestHelpers.swift in Sources */,
+				5B73493A2D84E167007F7D5D /* SharedLocalizationTestHelpers.swift in Sources */,
 				5B88291E2D6BD7BE006E0BD7 /* URLProtocolStub.swift in Sources */,
 				5B034B412CA371CB00FB65F8 /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				5B74FD222D6A5F39007478DC /* FeedPresenterTests.swift in Sources */,
@@ -997,6 +1004,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B1C4FC92C057236003F0429 /* EssentialFeedAPIEndToEndTests.swift in Sources */,
+				5B7349392D84E167007F7D5D /* SharedLocalizationTestHelpers.swift in Sources */,
 				5B1C4FD02C0579EE003F0429 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				5B034B462CA3A1A100FB65F8 /* SharedTestHelpers.swift in Sources */,
 			);
@@ -1023,6 +1031,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B6992972CFE8D8B00DD47E9 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				5B7349382D84E167007F7D5D /* SharedLocalizationTestHelpers.swift in Sources */,
 				5BBDA1AD2D7CCA8000D68DF0 /* FeedSnapshotTests.swift in Sources */,
 				5BB735192D7D0CB000189186 /* XCTestCase+Snapshot.swift in Sources */,
 				5BB735172D7D0BEE00189186 /* UIViewController+Snapshot.swift in Sources */,
@@ -1035,6 +1044,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BA598C02CE19EE0007B1795 /* SharedTestHelpers.swift in Sources */,
+				5B7349372D84E167007F7D5D /* SharedLocalizationTestHelpers.swift in Sources */,
 				5BA598BC2CE194BC007B1795 /* EssentialFeedCacheIntegrationTests.swift in Sources */,
 				5B8829272D6BF168006E0BD7 /* FeedImageDataStoreSpy.swift in Sources */,
 				5BA598BF2CE19E50007B1795 /* FeedCacheTestHelpers.swift in Sources */,
