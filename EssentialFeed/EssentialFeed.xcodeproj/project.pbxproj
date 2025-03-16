@@ -433,9 +433,9 @@
 		5B4BAE8D2CFBA12700CE079A /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				5BB735112D7CD30C00189186 /* Helpers */,
 				5B4BAE922CFBA29600CE079A /* EssentialFeediOS.xctestplan */,
-				5BBDA1AC2D7CCA8000D68DF0 /* FeedSnapshotTests.swift */,
+				5BB735112D7CD30C00189186 /* Helpers */,
+				5B73494F2D87973B007F7D5D /* Feed UI */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -573,6 +573,14 @@
 				5B73494B2D853421007F7D5D /* ImageComments.xcstrings */,
 			);
 			path = "Image Comments Presentation";
+			sourceTree = "<group>";
+		};
+		5B73494F2D87973B007F7D5D /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				5BBDA1AC2D7CCA8000D68DF0 /* FeedSnapshotTests.swift */,
+			);
+			path = "Feed UI";
 			sourceTree = "<group>";
 		};
 		5B74FD1B2D64A6DE007478DC /* Helpers */ = {
