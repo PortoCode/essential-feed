@@ -23,6 +23,7 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         super.viewDidLoad()
         
         configureTableView()
+        configureTraitCollectionObservers()
         
         // Note: Using `onViewIsAppearing` to defer `beginRefreshing()` until the view is fully visible.
         // This ensures the spinner appears correctly, addressing a change in behavior introduced in iOS 17.
@@ -44,9 +45,11 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         }
     }
     
-    public override func traitCollectionDidChange(_ previous: UITraitCollection?) {
-        if previous?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
-            tableView.reloadData()
+    private func configureTraitCollectionObservers() {
+        registerForTraitChanges(
+            [UITraitPreferredContentSizeCategory.self]
+        ) { (self: Self, previous: UITraitCollection) in
+            self.tableView.reloadData()
         }
     }
     
