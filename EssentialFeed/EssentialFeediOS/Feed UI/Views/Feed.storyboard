@@ -51,9 +51,9 @@
                                                                 <constraint firstAttribute="width" constant="10" id="UAW-pF-cy1"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location, Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QqM-me-7wW">
-                                                            <rect key="frame" x="16" y="0.0" width="337" height="36"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location, Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QqM-me-7wW">
+                                                            <rect key="frame" x="16" y="0.0" width="337" height="38"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -98,13 +98,13 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOV-JR-Hpy">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOV-JR-Hpy">
                                                     <rect key="frame" x="0.0" y="417" width="353" height="124"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="124" id="nVc-tv-9dQ"/>
                                                     </constraints>
                                                     <string key="text">Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa Label aaaaa aaaa  aaaa a aa</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
