@@ -57,7 +57,7 @@ extension ListViewController {
 
 extension ListViewController {
     func numberOfRenderedComments() -> Int {
-        tableView.numberOfSections == 0 ? 0 :  tableView.numberOfRows(inSection: commentsSection)
+        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: commentsSection)
     }
     
     func commentMessage(at row: Int) -> String? {
@@ -112,6 +112,12 @@ extension ListViewController {
         delegate?.tableView?(tableView, didEndDisplaying: view!, forRowAt: index)
         
         return view
+    }
+    
+    func simulateTapOnFeedImage(at row: Int) {
+        let delegate = tableView.delegate
+        let index = IndexPath(row: row, section: feedImagesSection)
+        delegate?.tableView?(tableView, didSelectRowAt: index)
     }
     
     func simulateFeedImageViewNearVisible(at row: Int) {
